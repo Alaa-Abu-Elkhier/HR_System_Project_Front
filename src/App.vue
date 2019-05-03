@@ -1,28 +1,71 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
+   <!-- <keep-alive>
+    <component v-bind:is="component"></component>
+    </keep-alive>
+    <a href="#" v-on:click=" component='Add'">Add</a>
+    <button type="button" v-on:click=" component='Add'">Add</button>
+    <button type="button" v-on:click=" component='Get'">Get</button>
+    <button type="button" v-on:click=" component='LogIn'">LogIn</button>
+    <button type="button" v-on:click=" component='search'">LogIn</button>-->
+     
+  
+    
+    
+      
+    
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Get from './components/Get'
+import Add from './components/Add'
+import Navbar from './components/Navbar'
+import LogIn from './components/LogIn'
+import search from './components/search'
+
+
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    'Get':Get,
+    'Add':Add,
+    'Navbar':Navbar,
+    'LogIn':LogIn,
+   'search': search,
+   
+    
+   
+  },
+  data() {
+    return {
+      component:'',
+      name:'',
+     
+    }
+  },
+  methods:{
+    plapla(){
+      
+    }
   }
+  
+
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body
+{
+	
+	margin:0;
+	padding:0;
+	background: url('./assets/background.jpg');
+	font-family: sans-serif; 
 }
+
 </style>
