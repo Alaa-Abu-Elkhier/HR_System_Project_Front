@@ -22,7 +22,7 @@
 <script>
 import Get from './components/Get'
 import Add from './components/Add'
-import Navbar from './components/Navbar'
+
 import LogIn from './components/LogIn'
 import search from './components/search'
 
@@ -34,7 +34,6 @@ export default {
   components: {
     'Get':Get,
     'Add':Add,
-    'Navbar':Navbar,
     'LogIn':LogIn,
    'search': search,
    
@@ -49,9 +48,7 @@ export default {
     }
   },
   methods:{
-    plapla(){
-      
-    }
+   
   }
   
 

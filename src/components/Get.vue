@@ -12,11 +12,20 @@
                 <tr>
                     <th>Name</th>
                     <th>Department</th>
+                    <th>Project</th>
+                    <th>Salary</th>
+                    <th>E-mail</th>
+                    <th>Position</th>
 
                 </tr>
                     <tr v-for="value in data ">
                         <td>{{value.name| capitalize }}</td>
-                        <td>{{value.Department}}</td>
+                        <td>{{value.department| capitalize }}</td>
+                        <td>{{value.project| capitalize }}</td>
+                        <td>{{value.salary| capitalize }}</td>
+                        <td>{{value.e_mail| capitalize }}</td>
+                        <td>{{value.position| capitalize }}</td>
+                        
                     </tr>
 
 
@@ -49,7 +58,7 @@ export default {
     methods:{
         get(){
              console.log("test")
-				axios.get('http://localhost:3000/Hr-System')
+				axios.get('http://localhost:8000/api/employees')
 					.then(response=>{
                         this.data=response.data
                         

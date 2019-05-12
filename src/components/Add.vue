@@ -1,27 +1,52 @@
 <template>
  
 <div>
-    <h1>this Add component</h1>
+    
 		<div>
 		<img src="../assets/add.png" class="img">
 		</div>
 	
      <div class="Box">
 			 
-			 <span class="form-heading"></span>
+			 
 
 
-              <form>
+              <form autocomplete="off">
                   <p>Empolyee Name</p>
                   <input v-model="info.name" type="text" name = "" required>
-                  <p>Department</p>
-                  <input  v-model="info.Department" type="text" name = "" >
-									 <p>Age</p>
-                  <input v-model="info.Age" type="text" name = "" required>
-				  				<button type="button" v-on:click="post">Add</button>
+									<p>E-mail</p>
+                  <input v-model="info.e_mail" type="text" name = "" required>
+										<p>Password</p>
+                  <input v-model="info.password" type="password" name = "" required>
+                  <div class="inputbox">
+										<p>Department</p>
+				
+										<select v-model="info.department" >
+											
+												<option value="manager">Manager</option>
+												<option value="it">It</option>
+												<option value="workers">Workers</option>
+										</select>
+											<p>Position</p>
+				
+										<select v-model="info.position" >
+											
+												<option value="manager">Manager</option>
+												<option value="it">It</option>
+												<option value="workers">Workers</option>
+										</select>
+										
+
+										</div>
+										<p>Project</p>
+                  <input v-model="info.project" type="text" name = "" required>
+									<p>Salary</p>
+                  <input v-model="info.salary" type="text" name = "" required>
+									 
+				  				<!--<button type="button" v-on:click="post">Add</button>-->
 								
 									
-								<!--	<input type="submit">-->
+								<input type="submit" v-on:click="post" value="Add">
 				  
 				  
   
@@ -34,6 +59,13 @@
 </template>
 
 <script>
+
+
+
+
+
+
+ import router from '../router'
 const axios = require('axios');
 
 export default {
@@ -43,17 +75,13 @@ export default {
 			return {
 				status:"",
                   info: {
-                     name: '',
-                     ID:null,
-                     Department: '',
-                     Position:'',
-                     Salary: null,
-                     overTimehours: '',
-                     Adress:'',
-                     Phone: null,
-                     birthDate: null,
-                     Email: '',
-										 Age:null,
+                    name: '',	
+										department:'',
+										project:'',
+										salary:'',
+										e_mail:'',
+										password:'',
+										position:'',
                   }
 			}
 		},
@@ -61,25 +89,42 @@ export default {
 	methods: {
 				
 			submit(){
-				console.log("Done");
+				router.push({ name: "LogIn" });
+			
 			
 			},
 			
 
 			
 			post(){
-				console.log(this.info.Age);
-				axios.post('http://localhost:3000/Hr-System',{ 
+				
+				
+				axios.post('http://localhost:8000/api/employees',{ 
 					name: this.info.name,
-					Department: this.info.Department, })
+					department:this.info.department,
+					project:this.info.project,
+					salary:this.info.salary,
+					e_mail:this.info.e_mail,
+					password:this.info.password,
+					position:this.info.position,
+				
+					})
 			    .then(function(response){
+					
 					console.log(response);
+					alert("Employee Added Successfully");
+					location.reload();
+					
+					
+					
 
 				})
 				.catch(function(error)
 				{
-					console.log(error);
+					console.log(error.response);
+					alert(error.response.data);
 				})
+				
 									
 
 			},
@@ -149,6 +194,18 @@ export default {
 	
 	
 }
+.Box input[type="password"], .loginBox input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid rgb(46, 93, 131);
+	background: transparent;
+	outline:none;
+	height:45px;
+	color:rgb(71, 64, 64);
+	font-size: 18px;
+	
+	
+}
 
 
 .Box input[type="submit"]
@@ -156,6 +213,7 @@ export default {
 	border:none;
 	outline:none;
 	height: 40px;
+	width: 110px;
 	color:#fff;
 	font-size:16px;
 	background: rgb(255,38,126);
@@ -166,8 +224,8 @@ export default {
 
 .Box input[type="submit"]:hover
 {
-	background: #efed40;
-	color: #262626;
+	background: #59a3f8;
+	color:rgb(252, 251, 251) 
 }
 .Box button
 {
@@ -185,6 +243,7 @@ button:hover{
 	color: #262626;
 
 }
+
 
 	
 
