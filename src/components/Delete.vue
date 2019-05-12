@@ -2,7 +2,7 @@
 <div>
     
     	<div>
-		
+		<img src="../assets/test4.png" class="img">
 		</div>
     
     <div class="d-tabel">
