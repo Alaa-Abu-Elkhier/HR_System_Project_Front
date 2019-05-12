@@ -11,10 +11,10 @@
         
      <div class="Nav">
         <ul>
-        <li><router-link to="/add"><b>Add</b></router-link></li>
-        <li><router-link to="/update"><b>Update</b></router-link></li>
-        <li><router-link to="/delete"><b>Delete</b></router-link></li>
-        <li><router-link to="/search"><b>Search</b></router-link></li>
+        <li><router-link to="/add"><b>Add  Employee</b></router-link></li>
+        <li><router-link to="/update"><b>Update  Employee</b></router-link></li>
+        <li><router-link to="/delete"><b>Delete  Employee</b></router-link></li>
+        <li><router-link to="/search"><b>Search For  Employee</b></router-link></li>
         <li><router-link to="/"><b>LogOut</b></router-link></li>
         
         </ul>
@@ -94,7 +94,7 @@ li a {
 
 /* Change the link color on hover */
 li a:hover {
-  background-color: rgb(102, 102, 102);
+  background-color:#59a3f8;
   color: white;
   border-radius: 20px;
 
