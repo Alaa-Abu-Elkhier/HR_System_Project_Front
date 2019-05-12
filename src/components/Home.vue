@@ -90,6 +90,7 @@ li a {
   margin: 10px;
   font-size: 20px;
   text-decoration: none;
+  font-style: italic;
 }
 
 /* Change the link color on hover */
