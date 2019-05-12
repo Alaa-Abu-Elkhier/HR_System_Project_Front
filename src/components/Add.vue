@@ -2,7 +2,7 @@
  
 <div>
     
-		<div>
+		<div class="positon">
 		<img src="../assets/add.png" class="img">
 		</div>
 	
@@ -18,6 +18,7 @@
                   <input v-model="info.e_mail" type="text" name = "" required>
 										<p>Password</p>
                   <input v-model="info.password" type="password" name = "" required>
+									
                   <div class="inputbox">
 										<p>Department</p>
 				
@@ -47,6 +48,10 @@
 								
 									
 								<input type="submit" v-on:click="post" value="Add">
+								<div>
+								<button type="submit"><router-link to="/home">Home</router-link></button>
+								</div>
+								
 				  
 				  
   
@@ -141,8 +146,12 @@ export default {
 	width:950px;
 	height:950px; 
 	overflow:hidden;
-	position:absolute;
+	position:fixed;
 	transform: translate(90%,-12%);
+}
+.positon
+{
+	position: fixed
 }
 
 
@@ -232,16 +241,27 @@ export default {
 	border:none;
 	outline:none;
 	height: 40px;
+	width: 110px;
 	color:#fff;
 	font-size:16px;
-	background: rgb(77, 146, 236);
+	background: rgb(255,38,126);
 	cursor:pointer;
 	border-radius:20px;
+	text-decoration: none;
+}
+a {
+  
+  text-decoration: none;
+	color:#fff;
 }
 button:hover{
-	background: #efed40;
+	background: #59a3f8;
 	color: #262626;
 
+}
+ a {
+  
+  text-decoration: none;
 }
 
 

@@ -6,7 +6,7 @@
 		</div>
     
     <div class="d-tabel">
-        <h1> this delete componnent</h1>
+        <h1> this update componnent</h1>
         
     </div>
 
