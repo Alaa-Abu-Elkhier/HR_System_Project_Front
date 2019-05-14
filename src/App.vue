@@ -23,7 +23,7 @@
 import Get from './components/Get'
 import Add from './components/Add'
 
-import LogIn from './components/LogIn'
+
 import search from './components/search'
 
 
@@ -34,7 +34,7 @@ export default {
   components: {
     'Get':Get,
     'Add':Add,
-    'LogIn':LogIn,
+    
    'search': search,
    
     

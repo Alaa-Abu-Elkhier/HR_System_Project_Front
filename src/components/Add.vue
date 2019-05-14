@@ -48,15 +48,16 @@
 								
 									
 								<input type="submit" v-on:click="post" value="Add">
-								<div>
-								<button type="submit"><router-link to="/home">Home</router-link></button>
-								</div>
+								
 								
 				  
 				  
   
                   
                </form>
+							 <div>
+								<button type="submit"><router-link to="/home">Home</router-link></button>
+								</div>
             </div>
 </div>
 

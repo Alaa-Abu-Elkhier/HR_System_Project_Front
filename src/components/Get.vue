@@ -5,9 +5,9 @@
     	<div>
 		<img src="../assets/get.png" class="img">
 		</div>
-    <button type="button" v-on:click="get">Get</button>
+    <button class="but" type="button" v-on:click="get">Show Empolyees</button>
     <div class="d-tabel">
-        <h1>All Data of Empolyees</h1>
+        
         <table>
             <tbody>
                 <tr>
@@ -20,12 +20,12 @@
 
                 </tr>
                     <tr v-for="value in data ">
-                        <td>{{value.name| capitalize }}</td>
-                        <td>{{value.department| capitalize }}</td>
-                        <td>{{value.project| capitalize }}</td>
-                        <td>{{value.salary| capitalize }}</td>
-                        <td>{{value.e_mail| capitalize }}</td>
-                        <td>{{value.position| capitalize }}</td>
+                        <td>{{value.name }}</td>
+                        <td>{{value.department}}</td>
+                        <td>{{value.project }}</td>
+                        <td>{{value.salary }}</td>
+                        <td>{{value.e_mail }}</td>
+                        <td>{{value.position }}</td>
                         
                     </tr>
 
@@ -58,7 +58,7 @@ export default {
     },
     methods:{
         get(){
-             console.log("test")
+            
 				axios.get('http://localhost:8000/api/employees')
 					.then(response=>{
                         this.data=response.data
@@ -118,6 +118,21 @@ th,td{
     padding: 15px;
   
 }
+ button
+{
+	border:none;
+	outline:none;
+	height: 40px;
+	width: 110px;
+	color:#fff;
+	font-size:16px;
+	background: rgb(255,38,126);
+	cursor:pointer;
+	border-radius:10px;
+	text-decoration: none;
+}
+
+
 
 </style>
 

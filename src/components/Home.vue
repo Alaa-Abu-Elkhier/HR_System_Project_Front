@@ -7,7 +7,7 @@
         
     
     
-        <h1> this Home componnent</h1>
+        
         
      <div class="Nav">
         <ul>
@@ -15,6 +15,7 @@
         <li><router-link to="/update"><b>Update  Employee</b></router-link></li>
         <li><router-link to="/delete"><b>Delete  Employee</b></router-link></li>
         <li><router-link to="/search"><b>Search For  Employee</b></router-link></li>
+        <li><router-link to="/get"><b>Show All Emolyees</b></router-link></li>
         <li><router-link to="/"><b>LogOut</b></router-link></li>
         
         </ul>
@@ -74,7 +75,7 @@ ul {
   margin: 0;
   padding: 22px;
   padding-bottom:10px;  
-  height: 460px;
+  height: 550px;
   width: 430px;
   background-color: #f1f1f1;
   transform: translate(60%,35%);
@@ -91,6 +92,9 @@ li a {
   font-size: 20px;
   text-decoration: none;
   font-style: italic;
+ /* background-color:#6d6d6d;
+  border-radius: 20px;*/
+  
 }
 
 /* Change the link color on hover */
