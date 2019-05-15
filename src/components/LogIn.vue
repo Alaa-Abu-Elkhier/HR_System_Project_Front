@@ -42,7 +42,7 @@ export default {
         return {
             
             info:{
-            email:'',
+            e_mail:'',
             password:'',
             }
         }
@@ -52,7 +52,7 @@ export default {
     post()
     {  
         axios.post('http://localhost:8000/api/login',{
-            email: this.info.email,
+            e_mail: this.info.e_mail,
             password: this.info.password,
             
         })
@@ -60,7 +60,7 @@ export default {
             
             console.log(response);
            
-            alert("Login Successfully");
+            window.location.href = 'http://localhost:8080/?#/home'
 			
         })
         .catch(function(error)
@@ -68,6 +68,7 @@ export default {
                     console.log(error.response);
                     
 					alert(error.response.data);
+					
 				})
 
        

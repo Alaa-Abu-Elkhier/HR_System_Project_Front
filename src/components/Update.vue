@@ -10,19 +10,19 @@
             <form autocomplete="off">
                
                 <p>Name</p>
-                <input v-model="info.name" type="text" name = "name"  >
+                <input v-model="info.name" type="text" >
                 <p>Department</p>
-                <input v-model="info.department" type="text" name = "department"   >
+                <input v-model="info.department" type="text">
                 <p>Project</p>
-                <input v-model="info.project" type="text" name = "project"   >
+                <input v-model="info.project" type="text">
                 <p>Salary</p>
-                <input v-model="info.salary" type="text" name = "salary"  >
+                <input v-model="info.salary" type="text">
                 <p>E_mail</p>
-                <input v-model="info.e_mail" type="text" name = "e_mail"  >
+                <input v-model="info.e_mail" type="text">
                 <p>Password</p>
-                <input v-model="info.password" type="text" name = "password" >
+                <input v-model="info.password" type="text">
                 <p>Position</p>
-                <input v-model="info.position" type="text" name = "position"  >
+                <input v-model="info.position" type="text">
                 <div>
                     <button type="button" v-on:click="update">Update</button>  
                 </div>
@@ -66,7 +66,7 @@ export default {
                 salary:this.info.salary,
                 e_mail:this.info.e_mail,
                 password:this.info.password,
-                position:this.info.position
+                position:this.info.position,
             })
             .then(function(response){
                 console.log(response)
